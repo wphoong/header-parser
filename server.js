@@ -8,6 +8,7 @@ let app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
+app.set('trust proxy', true)
 
 app.get("/", (req, res) => {
   res.render('index.html.ejs');
